@@ -1,0 +1,12 @@
+.test {
+    background:lightgray;
+    margin: 5rem;
+
+
+}
+
+#app {
+    border: black 3px solid;
+    background: black;
+    color: white;
+}

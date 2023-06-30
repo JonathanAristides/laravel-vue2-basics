@@ -11,13 +11,12 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet"/>
 
     <!-- Styles -->
-    <style>
-    </style>
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
 </head>
-<body class="antialiased">
+<body class="antialiased test">
 
 @php
-    $test = 'test';
+    $testVariable = 'test';
 @endphp
 
 @yield('content')
@@ -26,7 +25,7 @@
     <test></test>
 </div>
 
-<x-testcomponent :test="$test"></x-testcomponent>
+<x-testcomponent :test="$testVariable"></x-testcomponent>
 
 <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
 

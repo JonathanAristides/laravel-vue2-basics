@@ -8,11 +8,15 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            componentName: 'TestComponent',
+            link:"https://www.google.com"
+        }
     },
     methods: {
         handleClick() {
             console.log('Button clicked.');
+            console.log(this.componentName)
         },
         mounted() {
             console.log('Component mounted.');
@@ -22,12 +26,10 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-    color: blue;
-}
+
 
 button {
-    background-color: yellow;
+    background-color: white;
     color: black;
     padding: 8px 16px;
     font-size: 16px;
