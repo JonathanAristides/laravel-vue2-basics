@@ -1,12 +1,13 @@
 <template>
     <div v-theme:column="'narrow'" id="show-blogs">
 
-        <h1>ShowBlogs component</h1>
+        <h1>ListBlogs component</h1>
         <input type="text" v-model="searchInput" placeholder="Search...">
         <div class="single-blog" v-for="blog in filteredBlogs">
             <h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>
-            <article>{{ blog.body | shorten-text }}</article>
         </div>
+
+        <button v-on:click="scrollToTop">scroll to top</button>
 
     </div>
 </template>
@@ -22,17 +23,24 @@ export default {
             searchInput: ""
         }
     },
-    methods: {},
+    methods: {
+
+        scrollToTop() {
+            document.querySelector("input").scrollIntoView({
+                behavior: "smooth",
+                block:"end"
+            })
+        }
+
+    },
     created() {
         axios.get("https://jsonplaceholder.typicode.com/posts").then(data => {
-            this.blogs = data.data.slice(0, 2)
+            this.blogs = data.data.slice(0, 20)
         }).catch(error => {
             console.log(error)
         })
     },
-    computed: {
-
-    },
+    computed: {},
     filters: {
         toUppercase(value) {
             return value.toUpperCase();

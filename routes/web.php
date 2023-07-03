@@ -22,6 +22,14 @@
         ]);
     });
 
+    Route::get("/blog", function () {
+        return view("blog");
+    });
+
+
+
+
+
     Route::get('/test/{id}', function ($id) {
         @dd($id);
     });
@@ -37,6 +45,4 @@
         ]);
     });
 
-    Route::get("/blog", function () {
-        return view("blog");
-    });
+

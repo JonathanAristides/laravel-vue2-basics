@@ -11,8 +11,10 @@
 </head>
 <body>
 
+<x-insertableHeader></x-insertableHeader>
+
 <div id="blog-app">
-    <blog></blog>
+    <Blog></Blog>
 </div>
 
 

@@ -21,6 +21,8 @@
 
 @yield('content')
 
+<x-insertableHeader></x-insertableHeader>
+
 <div id="app">
     <test>
         <p>Slot test</p>

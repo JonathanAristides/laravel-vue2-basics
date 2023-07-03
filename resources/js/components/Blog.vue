@@ -1,6 +1,11 @@
 <template>
     <div>
-        <show-blogs></show-blogs>
+
+        <subheader></subheader>
+        <router-view>   </router-view>
+
+        <!--        <show-blogs></show-blogs>-->
+        <!--        <list-blogs></list-blogs>-->
         <!--        <add-blog></add-blog>-->
     </div>
 </template>
@@ -8,11 +13,15 @@
 <script>
 import addBlog from "./addBlog.vue";
 import showBlogs from "./showBlogs.vue";
+import listBlogs from "./listBlogs.vue";
+import subheader from "./subheader.vue";
 
 export default ({
     components: {
         addBlog,
-        showBlogs
+        showBlogs,
+        listBlogs,
+        subheader
     },
 
 
@@ -28,5 +37,8 @@ export default ({
 
 <style scoped>
 
+* {
+    font-family: 'Nunito', sans-serif;
+}
 
 </style>
