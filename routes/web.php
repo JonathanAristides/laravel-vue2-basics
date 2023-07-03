@@ -36,3 +36,7 @@
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
         ]);
     });
+
+    Route::get("/blog", function () {
+        return view("blog");
+    });

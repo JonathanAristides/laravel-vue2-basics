@@ -1,3 +1,3 @@
 @props([$test])
 
-<h2>from testcomponent as a seperate "component"</h2>
+<h2>from testcomponent as a seperate blade "component"</h2>

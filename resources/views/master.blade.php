@@ -22,7 +22,9 @@
 @yield('content')
 
 <div id="app">
-    <test></test>
+    <test>
+        <p>Slot test</p>
+    </test>
 </div>
 
 <x-testcomponent :test="$testVariable"></x-testcomponent>

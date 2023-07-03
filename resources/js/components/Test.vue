@@ -1,7 +1,9 @@
 <template>
     <div>
+        <slot></slot>
         <h1>from a vue component</h1>
         <button @click="handleClick">Click me</button>
+        <slot></slot>
     </div>
 </template>
 
