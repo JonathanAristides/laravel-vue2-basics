@@ -1,8 +1,7 @@
 <template>
     <nav>
-        <p style="color:white">Vue Subheader  ↓ </p>
+        <p style="color:white">Vue Subheader</p>
         <ul>
-
             <li>
                 <router-link to="/add" exact>Add new Blog</router-link>
             </li>

@@ -1,6 +1,13 @@
+* {
+
+    box-sizing: border-box;
+}
+
+
+
 .test {
     background:lightgray;
-    margin: 5rem;
+    margin: 1rem 2rem ;
 
 
 }

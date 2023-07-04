@@ -4,8 +4,10 @@
         <h1>ShowBlogs component</h1>
         <input type="text" v-model="searchInput" placeholder="Search...">
         <div class="single-blog" v-for="blog in filteredBlogs">
-            <h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>
-            <article>{{ blog.body | shorten-text }}</article>
+            <router-link v-bind:to="'/' + blog.id ">
+                <h2>{{ blog.title | to-uppercase }}</h2>
+                <article>{{ blog.body | shorten-text }}</article>
+            </router-link>
         </div>
 
     </div>
@@ -25,14 +27,12 @@ export default {
     methods: {},
     created() {
         axios.get("https://jsonplaceholder.typicode.com/posts").then(data => {
-            this.blogs = data.data.slice(0, 2)
+            this.blogs = data.data.slice(0, 10)
         }).catch(error => {
             console.log(error)
         })
     },
-    computed: {
-
-    },
+    computed: {},
     filters: {
         toUppercase(value) {
             return value.toUpperCase();
@@ -80,6 +80,11 @@ export default {
     box-sizing: border-box;
     padding: 20px;
     background: #eee;
+}
+
+.single-blog a {
+    color: black;
+    text-decoration: none;
 }
 
 </style>
